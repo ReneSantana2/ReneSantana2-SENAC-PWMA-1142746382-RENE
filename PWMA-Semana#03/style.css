@@ -1,0 +1,47 @@
+header{
+    background-color: blue;
+    width: 90%;
+    color: white;
+    padding:10px 20px;
+    box-sizing: border-box
+        /*o box-sizin: border-box evita aumentar a largura da caixa*/
+
+}
+
+nav{
+    background-color: gray;
+    border: solid red 1px;
+    align-items: center
+
+}
+main{
+    background-color: bisque;
+    width: 90%;
+    height: 400px;
+    padding: 10px 20px;
+    box-sizing: border-box
+}
+footer{
+    background-color: blue;
+    width: 90%;
+    padding: 10px 20px;
+    box-sizing: border-box
+}
+*{
+    margin: 0 auto
+}
+herader, nav, main, footer{
+    width: 90%;
+    padding: 10px 20px;
+    box-sizing: border-box
+}
+        nav a{
+        color: white;
+        text-decoration: none;
+        padding: 5px 20px
+    }
+    
+    nav a:hover{
+        background-color: red
+    }   
+    
