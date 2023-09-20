@@ -1,0 +1,74 @@
+header{
+    background-color: blue;
+    width: 90%;
+    color: white;
+    padding:10px 20px;
+    box-sizing: border-box
+        /*o box-sizin: border-box evita aumentar a largura da caixa*/
+
+}
+
+
+nav{
+    background-color: gray;
+    border: solid red 1px;
+    align-items: center
+
+}
+main{
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+    width: 90%;
+    height: 500px;
+    padding: 10px 20px;
+    box-sizing: border-box
+}
+section{
+    height: 500px;
+    background-color: gold;
+    width: 630px;
+            
+    }
+    
+footer{
+    height: 110px;
+    background-color: gold;
+    width: 960px;
+   
+}
+
+
+   ul{
+   
+    color: black;
+    box-sizing: border-box;
+    align-items: center
+   }
+   
+         
+   
+*{
+    margin: 0 auto
+}
+header, nav, main, footer{
+    width: 90%;
+    padding: 10px 20px;
+    box-sizing: border-box
+}
+        nav a{
+        color: black;
+        text-decoration: none;
+        padding: 5px 20px
+    }
+    
+    nav a:hover{
+        background-color: red
+    }   
+    
+    iframe{
+        text-align: center;
+        border: 0px;
+        width: 100%;
+        hight: 500px;
+    }
