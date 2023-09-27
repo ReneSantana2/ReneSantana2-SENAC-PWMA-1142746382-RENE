@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .property-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .property-box:hover {
+      background-color: #222;
+    }
+  </style>
+  <title>Lista de Imóveis</title>
+</head>
+<body>
+
+<h1>Lista de Imóveis</h1>
+
+<!-- Caixa para a Lista 1: Zona Sul -->
+<div class="property-box" onclick="displayPropertyList('Zona Sul')">
+  <h2>Zona Sul</h2>
+</div>
+
+<!-- Caixa para a Lista 2: Zona Norte -->
+<div class="property-box" onclick="displayPropertyList('Zona Norte')">
+  <h2>Zona Norte</h2>
+</div>
+
+<!-- Caixa para a Lista 3: Zona Leste -->
+<div class="property-box" onclick="displayPropertyList('Zona Leste')">
+  <h2>Zona Leste</h2>
+</div>
+
+<!-- Caixa para a Lista 4: Zona Oeste -->
+<div class="property-box" onclick="displayPropertyList('Zona Oeste')">
+  <h2>Zona Oeste</h2>
+</div>
+
+<!-- Lista de Imóveis -->
+<ul id="propertyList" class="property-list"></ul>
+
+<script>
+  // Dados simulados do banco de dados
+  const database = [
+    { id: 1, location: 'Zona Sul', status: 'venda,aluguel' },
+    { id: 2, location: 'Zona Sul', status: 'venda,aluguel' },
+    { id: 3, location: 'Zona Norte', status: 'venda,aluguel' },
+    { id: 4, location: 'Zona Norte', status: 'venda,aluguel' },
+    { id: 5, location: 'Zona Leste', status: 'venda,aluguel' },
+    { id: 6, location: 'Zona Leste', status: 'venda,aluguel' },
+    { id: 7, location: 'Zona Oeste', status: 'venda,aluguel' },
+    { id: 8, location: 'Zona Oeste', status: 'venda,aluguel' }
+  ];
+
+  // Função para preencher a lista de imóveis
+  function populatePropertyList(location) {
+    const list = document.getElementById('propertyList');
+    list.innerHTML = ''; // Limpa a lista
+
+    const filteredData = database.filter(item => item.location === location);
+    
+    filteredData.forEach(item => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `ID do imóvel: ${item.id}, Localização do imóvel: ${item.location}, Situação do imóvel: ${item.status}`;
+      list.appendChild(listItem);
+    });
+  }
+
+  // Função para exibir a lista de imóveis ao clicar na caixa
+  function displayPropertyList(location) {
+    populatePropertyList(location);
+  }
+</script>
+
+</body>
+</html>
